@@ -12,16 +12,23 @@ Project SRJ(가명)
 
 ## 멤버구성
 ## 개발환경
-Visual Studio <br/>
-HeidiSQL <br/>
+#### 사용 프로그램
+* Visual Studio : C# 응용 프로그램 개발용 <br/> 
+* HeidiSQL <br/>
+* Docker <br/>
 
-C# - Winform .NET Framework 4.8.1 <br/>
-MySQL <br/>
+#### 사용 언어
+* C# - Winform .NET Framework 4.8.1 <br/>
+* MySQL <br/>
 
-Docker <br/>
+#### 고려중
+* Java / JSP (Eclipse) <br/>
+* Bootstrap 5.3.2 (편집일 기준 최신버전) <br/>
 
 ## 주요기능
-운동 같이할 사람 파티 모집
-ELO(레이팅)에 따른 경기 매칭 기능
+* 운동 같이할 사람 파티 모집
+* ELO(레이팅)에 따른 경기 매칭 기능
 
 ## 배포 + 사양
+Windows 10 이상 <br/>
+.NET Framework 4.8.1 <br/>
