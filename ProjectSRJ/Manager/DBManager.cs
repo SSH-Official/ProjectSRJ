@@ -5,21 +5,59 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
 using MySql.Data.MySqlClient;
+using ProjectSRJ.DataModel;
 
 namespace ProjectSRJ
 {
-    internal class DBManager
+    public class DBManager
     {
         static string DefaultServer = "localhost";
         static string DefaultDatabase = "test";
         static string DefaultUid = "root";
         static string DefaultPwd = "1234";
         static int DefaultPort = 3306;
+        static string DefaultServerIP = "58.....";
+
+
 
         
+
+
+        class Server{
+            static public (bool, object) request(string str) {
+
+                //Server에 리퀘스트를 보내는 로직 작성필요
+                throw new NotImplementedException();
+            }
+        }
+
+        public List<(Board, string, int)> GetSearchList()
+        {
+            bool isSuccess; 
+            object result;
+            (isSuccess, result) = Server.request("/search member name kim");
+            if (isSuccess)
+            {
+                return result as List<(Board, string, int)>;
+            }
+            else
+            {
+                throw new Exception($"{result}");
+            }
+        }
+
+        public bool request(string command)
+        {
+            
+
+
+            return false;
+        }
+
+
         public List<Member> SelectMembers()
         {
-            List<Member> members = new List<Member>();
+            List<Member> members = new List<Member>();            
             
             string strConn = 
                 $"Server={DefaultServer};" +
@@ -68,6 +106,9 @@ namespace ProjectSRJ
             #endregion
         }
 
-
+        public object SearchMember(string args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

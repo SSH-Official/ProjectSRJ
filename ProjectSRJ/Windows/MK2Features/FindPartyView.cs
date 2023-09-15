@@ -21,7 +21,7 @@ namespace ProjectSRJ.Windows.MK2Features
             for (int i = 0; i < 100; i++)
             {
                 Label newComp = new Label();
-
+                //sendRequest("requestUserinfo : {UIASDP{Fasdf}");
                 newComp.Parent = flowLayoutPanel1;
                 newComp.Size = new Size(flowLayoutPanel1.Width, 50);
                 newComp.Location = new Point(0, 50 * i);

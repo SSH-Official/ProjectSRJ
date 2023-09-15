@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModel\Board.cs" />
     <Compile Include="Lib\Frame\MasterPop.cs">
       <SubType>Form</SubType>
     </Compile>
