@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel_Base = new System.Windows.Forms.Panel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel_Fill = new System.Windows.Forms.Panel();
             this.panel_Left = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -39,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel_Option01 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel_Base.SuspendLayout();
             this.panel_Left.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -58,6 +58,14 @@
             this.panel_Base.Name = "panel_Base";
             this.panel_Base.Size = new System.Drawing.Size(1264, 761);
             this.panel_Base.TabIndex = 0;
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(200, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 761);
+            this.splitter1.TabIndex = 6;
+            this.splitter1.TabStop = false;
             // 
             // panel_Fill
             // 
@@ -88,7 +96,6 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 189);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel3.Size = new System.Drawing.Size(200, 63);
             this.panel3.TabIndex = 4;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
@@ -97,9 +104,9 @@
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(20, 10);
+            this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 41);
+            this.label4.Size = new System.Drawing.Size(198, 61);
             this.label4.TabIndex = 0;
             this.label4.Text = "설정";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,7 +118,6 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 126);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel2.Size = new System.Drawing.Size(200, 63);
             this.panel2.TabIndex = 3;
             this.panel2.Click += new System.EventHandler(this.panel2_Click);
@@ -120,9 +126,9 @@
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(20, 10);
+            this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 41);
+            this.label3.Size = new System.Drawing.Size(198, 61);
             this.label3.TabIndex = 0;
             this.label3.Text = "동아리";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,7 +140,6 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel1.Size = new System.Drawing.Size(200, 63);
             this.panel1.TabIndex = 2;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
@@ -144,9 +149,9 @@
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(20, 10);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 41);
+            this.label2.Size = new System.Drawing.Size(198, 61);
             this.label2.TabIndex = 0;
             this.label2.Text = "파티찾기";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,7 +164,6 @@
             this.panel_Option01.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Option01.Location = new System.Drawing.Point(0, 0);
             this.panel_Option01.Name = "panel_Option01";
-            this.panel_Option01.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel_Option01.Size = new System.Drawing.Size(200, 63);
             this.panel_Option01.TabIndex = 1;
             this.panel_Option01.Click += new System.EventHandler(this.panel_Option01_Click);
@@ -168,20 +172,13 @@
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(20, 10);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 41);
+            this.label1.Size = new System.Drawing.Size(198, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "내 파티";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(200, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 761);
-            this.splitter1.TabIndex = 6;
-            this.splitter1.TabStop = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MainForm_MK2
             // 

@@ -14,19 +14,25 @@ namespace ProjectSRJ.Windows.MK2Features
 {
     public partial class FindPartyView : MasterView
     {
+        List<Control> CreatedControls = new List<Control>();
         public FindPartyView()
         {
             InitializeComponent();
             for (int i = 0; i < 100; i++)
             {
                 Label newComp = new Label();
+
                 newComp.Parent = flowLayoutPanel1;
                 newComp.Size = new Size(flowLayoutPanel1.Width, 50);
+                newComp.Location = new Point(0, 50 * i);
                 newComp.Dock = DockStyle.Top;
                 newComp.Text = i.ToString();
                 newComp.BorderStyle = BorderStyle.FixedSingle;
                 flowLayoutPanel1.Controls.Add(newComp);
+                CreatedControls.Add(newComp);                
             }
+
+            Console.WriteLine($"Created : {CreatedControls.Count}");
         }
 
         private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)
