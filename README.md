@@ -12,13 +12,13 @@ Project SRJ(가명)
 
 ## 멤버구성
 ## 개발환경
-Visual Studio 
-HeidiSQL
+Visual Studio <br/>
+HeidiSQL <br/>
 
-C# - Winform .NET Framework 4.8.1
-MySQL
+C# - Winform .NET Framework 4.8.1 <br/>
+MySQL <br/>
 
-Docker
+Docker <br/>
 
 ## 주요기능
 운동 같이할 사람 파티 모집
