@@ -29,11 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer_addon = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(234, 405);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "내 파티 목록";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer_addon
+            // 
+            this.timer_addon.Tick += new System.EventHandler(this.timer_addon_Tick);
+            // 
+            // MyPartyForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(234, 405);
+            this.Controls.Add(this.label1);
+            this.Name = "MyPartyForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyPartyForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer_addon;
     }
 }

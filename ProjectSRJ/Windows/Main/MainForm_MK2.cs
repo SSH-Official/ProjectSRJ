@@ -27,8 +27,9 @@ namespace ProjectSRJ.Windows.Main
             {
                 this.Views = new List<MasterView>
             {
-                new MyPartyView(),
-                new FindPartyView()
+                new MyPartyView(this),
+                new FindPartyView(this),
+                new PostView(this)
             };
 
                 foreach (MasterView view in this.Views)
@@ -42,7 +43,7 @@ namespace ProjectSRJ.Windows.Main
             }
         }
 
-        private void ShowView<T>()
+        public void ShowView<T>()
         {
             ShowView(typeof(T));
         }
@@ -50,8 +51,10 @@ namespace ProjectSRJ.Windows.Main
         private void ShowView(Type aType)
         {
             HideAllView();
-            GetView(aType).Visible = true;
-            GetView(aType).Refresh_View();
+            MasterView theView = GetView(aType);
+            if (theView == null) { throw new Exception($"The view was null : {aType}"); }
+            theView.Visible = true;
+            theView.Refresh_View();
         }
         private void HideAllView()
         {

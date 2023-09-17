@@ -13,11 +13,25 @@ namespace ProjectSRJ.Windows
 {
     public partial class Loading : Form
     {
-        public Loading()
+        bool waitForCommand = false;
+        bool WaitFormCommand
+        {
+            get { return waitForCommand; }
+            set 
+            { 
+                waitForCommand = value;
+                strLoading = 
+                    "##Debugging##\r\n" +
+                    "Loading";
+            }
+        }
+
+        public Loading(bool waitForCommand)
         {
             InitializeComponent();
             this.Size = new System.Drawing.Size(480, 320);
             progressBar1.Step = 90;
+            WaitFormCommand = waitForCommand;
         }
 
         int turnBack = 3;
@@ -36,12 +50,9 @@ namespace ProjectSRJ.Windows
 
             label_Loading.Text = theText_Loading;
 
-            if (progressBar1.Value >= 100)
+            if (progressBar1.Value >= 100 && waitForCommand == false)
             {
-                timer1.Enabled = false;
-                this.Visible = false;
-                LoginForm loginForm = new LoginForm();
-                loginForm.ShowDialog();
+                ProceedToNext();
             }
 
             progressBar1.PerformStep();
@@ -76,17 +87,45 @@ namespace ProjectSRJ.Windows
             
         }
 
+        private void ProceedToNext()
+        {
+            timer1.Enabled = false;
+            this.Visible = false;
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();            
+        }
+
         private void Loading_KeyDown(object sender, KeyEventArgs e)
         {
-            //if (this.Visible == false) return;
+            if (this.Visible == false) return;
 
             if (e.KeyCode == Keys.Escape)
             {
-                MessageBox.Show("Terminating Program...");
+                MessageBox.Show("프로그램을 종료합니다..");
                 Application.Exit();
             }            
         }
 
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+            if (progressBar1.Value >= 100)
+            {
+                ProceedToNext();
+            }
+        }
 
+        private void progressBar1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (progressBar1.Value >= 100) { ProceedToNext(); }
+            }
+
+            if (e.Button == MouseButtons.Right)
+            {
+                MessageBox.Show("연결에 실패했습니다... 다시 시도합니다.");
+                progressBar1.Value = 0;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lib.Frame;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,34 @@ namespace ProjectSRJ.Windows
         public FindPartyForm()
         {
             InitializeComponent();
+        }
+
+        MyPartyForm addon = null;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (addon != null)
+            {
+                addon.Dispose();
+                addon = null;
+                return;
+            }
+            else
+            {
+                addon = new MyPartyForm(this);
+                addon.Show();
+            }
+
+        }
+
+        public bool isDragging { get; private set; } = false;
+        //public Point offset;
+        private void FindPartyForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+            }
         }
     }
 }

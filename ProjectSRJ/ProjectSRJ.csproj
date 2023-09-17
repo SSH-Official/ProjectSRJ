@@ -53,7 +53,7 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector NET 8.1.0\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\MySql.Data\v4.0_8.1.0.0__c5687fc88969c44d\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -141,6 +141,12 @@
     <Compile Include="Windows\MK2Features\MyPartyView.Designer.cs">
       <DependentUpon>MyPartyView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\MK2Features\PostView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\MK2Features\PostView.Designer.cs">
+      <DependentUpon>PostView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Lib\Frame\MasterPop.resx">
       <DependentUpon>MasterPop.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +155,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\DBTestForm.resx">
       <DependentUpon>DBTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Feature\FindPartyForm.resx">
+      <DependentUpon>FindPartyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Feature\MyPartyForm.resx">
+      <DependentUpon>MyPartyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Main\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -176,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\MK2Features\MyPartyView.resx">
       <DependentUpon>MyPartyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\MK2Features\PostView.resx">
+      <DependentUpon>PostView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

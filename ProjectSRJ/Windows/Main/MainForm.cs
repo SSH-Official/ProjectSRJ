@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectSRJ.Windows;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,5 +19,16 @@ namespace ProjectSRJ
             this.FormClosed += (sender, e) => Application.Exit();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MyPartyForm theForm = new MyPartyForm();
+            theForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FindPartyForm theForm = new FindPartyForm();
+            theForm.Show();
+        }
     }
 }
